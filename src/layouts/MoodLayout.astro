@@ -1,0 +1,21 @@
+---
+import "@fontsource/overlock";
+import "@fontsource/overlock/700.css";
+let {title} = Astro.props;
+---
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<style>
+			body { font-family: "Overlock"; }
+		</style>
+	</head>
+	<body class="bg-[url('/src/assets/bg-global.jpg')] bg-cover border-8 border-white min-h-screen">
+		<slot />
+	</body>
+</html>
